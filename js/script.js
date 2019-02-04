@@ -26,27 +26,47 @@ function displaySongInfo(){
     images_links.forEach(function(image){
         $("#images").append("<img src='"+image+"'>");
     });
+    console.log(videolink);
     videolink.forEach(function(links){
-        $("#link").append("<a href="+links+">click here to listen</a>");
+        console.log(links);
+        $("#links").append("<a href="+links+">click here to listen</a>");
     });
 };
-//function emptySongInfo(){
+function emptySongInfo(){
     // Use jQuery to empty all of the remaining divs
-//artist.forEach(function(y){
+    $("#artists").empty();
+    $("#images").empty();
+    $("#songs").empty();
+    $("#lengths").empty();
+    $("#links").empty();
 
-//});
+};
 
 
-//function addSongInfo(){
+function addSongInfo(){
     // BELOW write the code to add new items to each of the arrays.
+var songname= $("#song").val();
+songs.push(songname);
 
+var artistname= $("#artist").val();
+artists.push(artistname);
 
-//}
+var lengths=$("#length").val();
+songlengths.push(lengths);
 
-//$("#add").click(function() {
-    //emptySongInfo();
-    //addSongInfo();
-  //  displaySongInfo();
-//});
+var images= $("#image").val();
+images_links.push(images);
+
+var links= $("#link").val();
+videolink.push(links);
+
+};
+
+$("#add").click(function() {
+    emptySongInfo();
+    addSongInfo();
+    displaySongInfo();
+});
 
 displaySongInfo();
+console.log("Loaded");
