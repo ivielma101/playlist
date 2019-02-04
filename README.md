@@ -13,7 +13,7 @@
 
 ### JS
 - [ ] Update the songs array in your project to have at least 4 songs
-- [ ] Create four new arrays to store images_urls, artists, song lengths, and links
+- [x ] Create four new arrays to store images_urls, artists, song lengths, and links
 ### html / css
 - [ ] Customize your CSS or add another column
 
